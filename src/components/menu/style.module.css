@@ -1,0 +1,17 @@
+.submenu {
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+.menu-items {
+	max-height: 0px;
+	overflow-y: hidden;
+	overflow-x: inherit;
+	transition: all 1s ease-out;
+}
+.menu-items.open {
+	max-height: 500px;
+	overflow-y: hidden;
+	overflow-x: inherit;
+	transition: all 1s ease-in;
+}
