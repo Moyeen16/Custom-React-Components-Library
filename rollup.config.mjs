@@ -4,10 +4,11 @@ import dts from "rollup-plugin-dts";
 import commonjs from "@rollup/plugin-commonjs";
 import packageJson from  "./package.json" assert { type: "json" };
 import postcss from "rollup-plugin-postcss";
-
+import { terser } from "rollup-plugin-terser";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 export default [
   {
-    input: "src/index.tsx",
+    input: "src/index.ts",
     output: [
       {
         file: packageJson.main,
@@ -21,10 +22,12 @@ export default [
       },
     ],
     plugins: [
+      peerDepsExternal(),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(), 
+      terser(),
     ],
   },
   {
