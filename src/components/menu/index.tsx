@@ -84,7 +84,9 @@ const MenuRender = (props: {
   );
 };
 
-const Menu = (props: { menuItems: IMenuItemsProps[] }) => {
+const Menu: React.FC<{ menuItems: IMenuItemsProps[] }> = (props: {
+  menuItems: IMenuItemsProps[];
+}) => {
   const [selected, setSelected] = useState<string>();
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
