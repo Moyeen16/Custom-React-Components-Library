@@ -15,7 +15,7 @@ const TopNavbar: React.FC<ITopNavbarProps> = (props: ITopNavbarProps) => {
             objectFit: "cover",
           }}
         />
-        <h1 className="text-navbar-text ml-4 text-xl font-bold leading-snug tracking-normal ">
+        <h1 className="ml-4 text-xl font-bold leading-snug tracking-normal ">
           <Link to="/" className="hover:text-navbar-text-hover">
             {props.applicationName}
           </Link>
