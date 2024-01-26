@@ -1,6 +1,6 @@
 {
   "name": "ms-custom-react-components-library",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "This is an easy to use custom library containing basic React components.",
   "scripts": {
     "build": "rimraf dist && rollup -c",
@@ -8,7 +8,7 @@
     "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
-  "homepage": "http://Moyeen16.github.io/Custom-React-Components-Library",
+  "homepage": "https://Moyeen16.github.io/Custom-React-Components-Library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
