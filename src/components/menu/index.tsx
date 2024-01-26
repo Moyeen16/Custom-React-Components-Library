@@ -96,6 +96,7 @@ const Menu: React.FC<{ menuItems: IMenuItemsProps[] }> = (props: {
 
   return (
     <div
+      className="min-w-32 max-w-48"
       onMouseEnter={() => setShowMenu(true)}
       onMouseLeave={() => setShowMenu(false)}
     >
