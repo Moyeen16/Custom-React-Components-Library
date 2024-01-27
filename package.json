@@ -1,6 +1,6 @@
 {
   "name": "ms-custom-react-components-library",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "This is an easy to use custom library containing basic React components.",
   "scripts": {
     "build": "rimraf dist && rollup -c",
@@ -16,7 +16,7 @@
   ],
   "types": "dist/index.d.ts",
   "author": "Moyeen Sarfaraj",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.23.8",
