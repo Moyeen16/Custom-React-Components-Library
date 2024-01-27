@@ -66,5 +66,26 @@ module.exports = {
 				hover: "#D46700",
 			},
 		},
+		input:{
+			prefix:{
+				DEFAULT: "#5B5864",
+				bg:"#F0F0F0"
+			},
+			suffix:{
+				DEFAULT: "#5B5864",
+				bg:"#F0F0F0"
+			},
+			label:{
+				DEFAULT:"#1a1628",
+			},
+			focus:{
+				bg: "#FAFAFA",
+				border:"#27a6a4"
+			},
+			error:{
+				DEFAULT:"#EF4444",
+				bg:"#FECDD3"
+			}
+		}
 	},
 };
