@@ -71,5 +71,4 @@ TextareaWithValidation.args = {
   label: "Label",
   placeholder: "Enter text here",
   required: true,
-  type: "text",
 };

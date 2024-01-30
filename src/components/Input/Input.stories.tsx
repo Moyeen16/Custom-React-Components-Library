@@ -3,6 +3,7 @@ import type { Meta } from "@storybook/react";
 import Input from "./index";
 import { IInputProps } from "../../models/IInputProps";
 import { CircleInfo } from "@styled-icons/fa-solid/CircleInfo";
+import { CircleWithCross } from "@styled-icons/entypo/CircleWithCross";
 // import { IMenuItemsProps } from "../../models/IMenuItemsProps";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -89,6 +90,100 @@ InputWithSuffixIcon.args = {
   ),
 };
 
+export const InputWithClear = (args: IInputProps) => {
+  const [value, setValue] = React.useState("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+
+  return (
+    <>
+      <Input {...args} onChange={handleChange} value={value} />
+    </>
+  );
+};
+
+InputWithClear.args = {
+  label: "Label",
+  placeholder: "Enter text here",
+  required: true,
+  type: "text",
+  allowClear: true,
+};
+
+export const InputWithClearIcon = (args: IInputProps) => {
+  const [value, setValue] = React.useState("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+
+  return (
+    <>
+      <Input {...args} onChange={handleChange} value={value} />
+    </>
+  );
+};
+
+InputWithClearIcon.args = {
+  label: "Label",
+  placeholder: "Enter text here",
+  required: true,
+  type: "text",
+  allowClear: true,
+  clearIcon: <CircleWithCross size={16} />,
+};
+export const InputWithCount = (args: IInputProps) => {
+  const [value, setValue] = React.useState("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+
+  return (
+    <>
+      <Input {...args} onChange={handleChange} value={value} />
+    </>
+  );
+};
+
+InputWithCount.args = {
+  label: "Label",
+  placeholder: "Enter text here",
+  required: true,
+  type: "text",
+  allowClear: true,
+  showCount: true,
+  maxLength: 30,
+};
+export const InputWithCountFormatter = (args: IInputProps) => {
+  const [value, setValue] = React.useState("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+  const countFormatter = (count: number) => {
+    return <div>Len : {count}</div>;
+  };
+  return (
+    <>
+      <Input
+        {...args}
+        onChange={handleChange}
+        value={value}
+        countFormatter={countFormatter}
+      />
+    </>
+  );
+};
+
+InputWithCountFormatter.args = {
+  label: "Label",
+  placeholder: "Enter text here",
+  required: true,
+  type: "text",
+  allowClear: true,
+  showCount: true,
+  maxLength: 30,
+};
+
 export const InputWithValidation = (args: IInputProps) => {
   const [value, setValue] = React.useState("");
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -120,4 +215,36 @@ InputWithValidation.args = {
   placeholder: "Enter text here",
   required: true,
   type: "text",
+};
+
+export const InputPassword = (args: IInputProps) => {
+  const [value, setValue] = React.useState("");
+  const [showPassword, setShowPassword] = React.useState(false);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+  const passwordToggle = (toggleValue: boolean) => {
+    setShowPassword(toggleValue);
+  };
+
+  return (
+    <>
+      <Input
+        {...args}
+        onChange={handleChange}
+        value={value}
+        visibilityToggle={{
+          visible: showPassword,
+          onVisibleChange: passwordToggle,
+        }}
+      />
+    </>
+  );
+};
+
+InputPassword.args = {
+  label: "Label",
+  placeholder: "Enter text here",
+  required: true,
+  type: "password",
 };
