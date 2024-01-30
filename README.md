@@ -35,6 +35,7 @@ import { BrowserRouter } from  "react-router-dom";
 ```
 import { Menu } from  "ms-custom-react-components-library";
 ...
+const [menuRouteSelected, setMenuRouteSelected] = React.useState<string>();
 const  handleItemClick = (route: string) => {
 	setMenuRouteSelected(route);
 };
@@ -77,7 +78,7 @@ const  menuItems: IMenuItemsProps[] = [
 ### Buttons
 
 ```
-import { Button} from  "ms-custom-react-components-library";
+import { Button } from  "ms-custom-react-components-library";
 ...
 const  buttonClick = (text: String) => {
 	alert(text);
@@ -90,4 +91,81 @@ const  buttonClick = (text: String) => {
 >
 	Button
 </Button>
+```
+
+### Input
+
+```
+import { Input } from  "ms-custom-react-components-library";
+...
+const [value, setValue] = React.useState("");
+const [showPassword, setShowPassword] = React.useState(false);
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	setValue(e.target.value);
+};
+const passwordToggle = (toggleValue: boolean) => {
+	setShowPassword(toggleValue);
+};
+const handleValidation = (value: string | number) => {
+    console.log("VALUE", value);
+    const response = {
+      error: value === "Moyeen" ? true : false,
+      message: "Validation Failed",
+    };
+    return response;
+};
+...
+<Input
+	label: "Label",
+	placeholder: "Enter text here",
+	required: true,
+	type: "text",
+	onChange={handleChange}
+	value={value}
+	validation={handleValidation(value)}
+	allowClear: true,
+	showCount: true,
+	maxLength: 30,
+/>
+<Input
+	label: "Label",
+	placeholder: "Enter text here",
+	required: true,
+	type: "password",
+	onChange={handleChange}
+	value={value}
+	visibilityToggle={{
+		visible: showPassword,
+		onVisibleChange: passwordToggle,
+	}}
+/>
+```
+
+### Textarea
+
+```
+import { Textarea } from  "ms-custom-react-components-library";
+...
+const [value, setValue] = React.useState("");
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	setValue(e.target.value);
+};
+const handleValidation = (value: string | number) => {
+    console.log("VALUE", value);
+    const response = {
+      error: value === "Moyeen" ? true : false,
+      message: "Validation Failed",
+    };
+    return response;
+};
+...
+<Textarea
+	label: "Label",
+	placeholder: "Enter text here",
+	required: true,
+	rows:{5}
+	onChange={handleChange}
+	value={value}
+	validation={handleValidation(value)}
+/>
 ```
