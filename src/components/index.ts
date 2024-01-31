@@ -1,5 +1,6 @@
 export { default as Button } from "./Button";
 export { default as Menu } from "./Menu";
 export { default as TopNavbar } from "./TopNavbar";
-export {default as Input } from "./Input"
-export {default as TextArea} from "./Textarea"
+export { default as Input } from "./Input";
+export { default as TextArea} from "./Textarea";
+export { default as Avatar } from "./Avatar";

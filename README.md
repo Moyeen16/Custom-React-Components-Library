@@ -169,3 +169,20 @@ const handleValidation = (value: string | number) => {
 	validation={handleValidation(value)}
 />
 ```
+
+### Avatar
+
+```
+import { Avatar } from  "ms-custom-react-components-library";
+import { User } from "@styled-icons/boxicons-regular/User";
+...
+<Avatar
+	size={20}
+	shape="circle"
+	icon: <User size={20} />
+></Avatar>
+<Avatar
+	src="link-to-image"
+	alt="Alt"
+></Avatar>
+```
