@@ -106,6 +106,28 @@ module.exports = {
 			error:{
 				DEFAULT:"#EF4444",
 				bg:"#FECDD3"
+			},
+			checked:{
+				bg:"#27a6a4"
+			},
+			border:{
+				DEFAULT : "#27a6a4"
+			},
+			hover:{
+				checked:{
+					bg: "#008080"
+				},
+				"non-checked":{
+					bg:"#8C8C8C",
+				}
+			},
+			disabled:{
+				checked:{
+					bg:"#76aba8"
+				},
+				"non-checked":{
+					bg:"#fafafa"
+				}
 			}
 		},
 	},
