@@ -186,3 +186,26 @@ import { User } from "@styled-icons/boxicons-regular/User";
 	alt="Alt"
 ></Avatar>
 ```
+
+### Switch
+
+```
+import { Switch } from "@styled-icons/boxicons-regular/User";
+...
+const [selected, setSelected] = React.useState(false);
+...
+<Switch
+	{...args}
+	onChange={(val) => {
+		setSelected(val);
+	}}
+/>
+<Switch
+	{...args}
+	onChange={(val) => {
+		setSelected(val);
+	}}
+	labelChecked="Yes"
+	labelNonChecked="No"
+/>
+```
