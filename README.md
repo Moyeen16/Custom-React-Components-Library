@@ -210,10 +210,10 @@ const [selected, setSelected] = React.useState(false);
 />
 ```
 
-### Switch
+### Checkbox
 
 ```
-import { Switch } from "ms-custom-react-components-library";
+import { Checkbox } from "ms-custom-react-components-library";
 ...
 const [value, setValue] = React.useState(true);
 const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
