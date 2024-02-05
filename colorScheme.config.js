@@ -65,6 +65,11 @@ module.exports = {
 				bg: "#EC7200",
 				hover: "#D46700",
 			},
+			disabled:{
+				DEFAULT : "#aaa",
+				bg:"#ccc",
+				border:"#999"
+			}
 		},
 		input:{
 			prefix:{
