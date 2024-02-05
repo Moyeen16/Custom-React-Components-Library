@@ -190,7 +190,7 @@ import { User } from "@styled-icons/boxicons-regular/User";
 ### Switch
 
 ```
-import { Switch } from "@styled-icons/boxicons-regular/User";
+import { Switch } from "ms-custom-react-components-library";
 ...
 const [selected, setSelected] = React.useState(false);
 ...
@@ -207,5 +207,25 @@ const [selected, setSelected] = React.useState(false);
 	}}
 	labelChecked="Yes"
 	labelNonChecked="No"
+/>
+```
+
+### Switch
+
+```
+import { Switch } from "ms-custom-react-components-library";
+...
+const [value, setValue] = React.useState(true);
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+setValue(e.target.checked);
+};
+...
+<Checkbox
+	{...args}
+	id="Checkbox1"
+	onChange={handleChange}
+	checked={value}
+	label="Checkbox"
+	disabled={false}
 />
 ```

@@ -5,7 +5,9 @@ const Button = (props: IButtonProps) => {
   return (
     <button
       className={`min-w-16 border-2 rounded-md px-4 py-1 font-medium text-clip whitespace-nowrap ${
-        props.transition
+        props.disabled
+          ? "bg-button-disabled-bg border-button-disabled-border text-button-disabled cursor-default"
+          : props.transition
           ? props.primary
             ? styles["button-primary-transition"] +
               " text-button-primary border-button-primary-bg hover:border-button-primary-hover"
@@ -24,6 +26,7 @@ const Button = (props: IButtonProps) => {
           ? "bg-button-alternate-bg border-button-alternate-bg hover:bg-button-alternate-hover hover:border-button-alternate-hover text-button-alternate"
           : ""
       } `}
+      disabled={props.disabled}
       onClick={props.onClick}
     >
       {props.children}

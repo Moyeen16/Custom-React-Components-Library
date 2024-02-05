@@ -75,3 +75,10 @@ export const AlternateHoverTransitionButton: Story = {
   },
   render: (args) => <Button {...args}>Click me!</Button>,
 };
+
+export const DisabledButton: Story = {
+  args: {
+    disabled: true,
+  },
+  render: (args) => <Button {...args}>Click me!</Button>,
+};

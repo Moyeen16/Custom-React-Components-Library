@@ -4,3 +4,5 @@ export { default as TopNavbar } from "./TopNavbar";
 export { default as Input } from "./Input";
 export { default as TextArea} from "./Textarea";
 export { default as Avatar } from "./Avatar";
+export { default as Switch } from "./Switch";
+export { default as Checkbox } from "./Checkbox";
