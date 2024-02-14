@@ -26,7 +26,7 @@ module.exports = {
             "blue-50": "#2B44C7",
             green: "#779189",
             orange: "#ad855f",
-            teal: "#27a6a4",
+            teal: "#32A29B",
         },
         text: {
             DEFAULT: "#454250",
@@ -40,7 +40,7 @@ module.exports = {
             "gray-30": "#B2B0B6",
             gray: "#fafafa",
             white: "#ffffff",
-            teal: "#27a6a4",
+            teal: "#32A29B",
             orange: "#ec7200",
             red: "#FF4D4F",
             // dark: "#0c87b8",
@@ -54,7 +54,7 @@ module.exports = {
         button: {
             primary: {
                 DEFAULT: "#FFFFFF",
-                bg: "#27a6a4",
+                bg: "#32A29B",
                 hover: "#008080",
             },
             transparent: {
@@ -85,7 +85,7 @@ module.exports = {
             },
             focus: {
                 bg: "#FAFAFA",
-                border: "#27a6a4",
+                border: "#32A29B",
             },
             error: {
                 DEFAULT: "#EF4444",
@@ -106,17 +106,17 @@ module.exports = {
             },
             focus: {
                 bg: "#FAFAFA",
-                border: "#27a6a4",
+                border: "#32A29B",
             },
             error: {
                 DEFAULT: "#EF4444",
                 bg: "#FECDD3",
             },
             checked: {
-                bg: "#27a6a4",
+                bg: "#32A29B",
             },
             border: {
-                DEFAULT: "#27a6a4",
+                DEFAULT: "#32A29B",
             },
             hover: {
                 checked: {
@@ -140,6 +140,13 @@ module.exports = {
             text: {
                 DEFAULT: "#5B5864",
             },
+        },
+        progress: {
+            DEFAULT: "#32A29B",
+            bg: "#ccc",
+            success: "#008545",
+            failure: "#D8000C",
+            warning: "#EAC959",
         },
     },
 };

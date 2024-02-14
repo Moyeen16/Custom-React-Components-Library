@@ -1,72 +1,72 @@
 .button-primary-transition {
-	position: relative;
-	overflow: hidden;
-	background: linear-gradient(to right, #27a6a4 50%, #008080 50%);
-	background-size: 200% 100%;
-	transition: background-position 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #32a29b 50%, #008080 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
 }
 .button-transparent-transition {
-	position: relative;
-	overflow: hidden;
-	background: linear-gradient(to right, transparent 50%, #f0f0f0 50%);
-	background-size: 200% 100%;
-	transition: background-position 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, transparent 50%, #f0f0f0 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
 }
 .button-alternate-transition {
-	position: relative;
-	overflow: hidden;
-	background: linear-gradient(to right, #ec7200 50%, #d46700 50%);
-	background-size: 200% 100%;
-	transition: background-position 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #ec7200 50%, #d46700 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
 }
 
 .button-primary-transition:hover,
 .button-transparent-transition:hover,
 .button-alternate-transition:hover {
-	background-position: -100% 0;
+    background-position: -100% 0;
 }
 
 .button-primary-transition::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #008080;
-	z-index: -1;
-	opacity: 0;
-	transition: opacity 0.3s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #008080;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .button-transparent-transition::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #f0f0f0;
-	z-index: -1;
-	opacity: 0;
-	transition: opacity 0.3s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .button-alternate-transition::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #d46700;
-	z-index: -1;
-	opacity: 0;
-	transition: opacity 0.3s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d46700;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .button-primary-transition:hover::before,
 .button-transparent-transition:hover::before,
 .button-alternate-transition:hover::before {
-	opacity: 1;
+    opacity: 1;
 }

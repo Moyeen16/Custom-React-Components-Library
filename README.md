@@ -260,3 +260,47 @@ return (
 	</div>
 );
 ```
+
+### Drawer
+
+```
+import { Button, Drawer } from "ms-custom-react-components-library";
+...
+const [isOpen, setIsOpen] = React.useState(false);
+...
+return (
+	<div>
+		<Button primary onClick={() => setIsOpen(true)}>
+			Open Drawer
+		</Button>
+		<Drawer
+			{...args}
+			isOpen={isOpen}
+			onClose={() => {
+				setIsOpen(false);
+			}}
+			onCancel={() => setIsOpen(false)}
+			onOk={() => setIsOpen(false)}
+		>
+			<div style={{ width: "500px" }}>
+				<h1>Basic Simple Drawer</h1>
+				<div>Contents</div>
+				<div>Contents</div>
+				<div>Contents</div>
+			</div>
+		</Drawer>
+	</div>
+);
+```
+
+### Progress Bar
+
+```
+import { Button, Drawer } from "ms-custom-react-components-library";
+...
+return (
+	<div style={{ width: "200px" }}>
+		<ProgressBar completedPercent={10}, />
+	</div>
+);
+```
