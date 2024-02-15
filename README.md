@@ -304,3 +304,14 @@ return (
 	</div>
 );
 ```
+
+### Tag
+
+import { Tag } from "ms-custom-react-components-library";
+...
+
+```
+return(
+	<Tag text="Hello!" />
+)
+```
