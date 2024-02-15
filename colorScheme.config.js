@@ -147,6 +147,32 @@ module.exports = {
             success: "#008545",
             failure: "#D8000C",
             warning: "#EAC959",
+            text: {
+                DEFAULT: "#5B5864",
+            },
+        },
+        tags: {
+            text: {
+                DEFAULT: "#5B5864",
+                success: "#7FD07D",
+                warning: "#EAC959",
+                error: "#ff4d4f",
+                processing: "#408CFF",
+            },
+            bg: {
+                DEFAULT: "#fafafa",
+                success: "#CCECCB",
+                warning: "#F7E9BD",
+                error: "#fff2f0",
+                processing: "#B3D1FF",
+            },
+            border: {
+                DEFAULT: "#d9d9d9",
+                success: "#98DA97",
+                warning: "#EED47A",
+                error: "#ffccc7",
+                processing: "#66A3FF",
+            },
         },
     },
 };
