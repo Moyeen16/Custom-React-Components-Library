@@ -1,6 +1,6 @@
 {
     "name": "ms-custom-react-components-library",
-    "version": "1.0.19",
+    "version": "1.0.20",
     "description": "This is an easy to use custom library containing basic React components.",
     "scripts": {
         "build": "rimraf dist && rollup -c",
