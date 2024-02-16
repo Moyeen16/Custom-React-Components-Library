@@ -1,0 +1,34 @@
+.table-container tbody tr:first-child td {
+    border-top: none;
+}
+.table-container tbody tr:nth-child(n) td {
+    background: #f9f9f9;
+}
+.table-container tbody tr:nth-child(2n) td {
+    background: #ffff;
+}
+.table-container a {
+    color: #32a29b;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.table-container thead {
+    width: 100%;
+}
+
+.nested-table tbody tr:nth-child(2n) td {
+    background: #ffff; /* Even row color */
+}
+
+.nested-table tbody tr:nth-child(odd) td {
+    background: #f9f9f9; /* Odd row color */
+}
+/* .expanded-content {
+  transition: max-height 0.5s ease;
+}
+.expanded-content.collapsed {
+  max-height: 0;
+}
+.expanded-content.expanded {
+  max-height: 1000vh;
+} */

@@ -315,3 +315,22 @@ return(
 	<Tag text="Hello!" />
 )
 ```
+
+### Dropdown
+
+import { Dropdown } from "ms-custom-react-components-library";
+...
+const options: [
+{ value: "option1", label: "Option 1" },
+{ value: "option2", label: "Option 2" },
+{ value: "option3", label: "Option 3" },
+];
+...
+
+```
+return(
+	<div style={{ width: "700px" }}>
+		<Dropdown options={options} />
+	</div>
+)
+```
