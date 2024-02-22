@@ -154,7 +154,7 @@ const Table = (props: ITableProps) => {
 
             <TablePagination
                 currentPage={currentPage}
-                totalNumberofPages={100}
+                totalNumberofPages={totalNumberOfPages}
                 setCurrentPage={setCurrentPage}
             />
         </div>

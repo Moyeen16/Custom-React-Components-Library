@@ -6,7 +6,7 @@ interface ISelectedValue {
     value: string | number;
     label: string;
 }
-const Dropdown = (props: IDropdownProps & React.HTMLProps<HTMLDivElement>) => {
+const Dropdown = (props: React.HTMLProps<HTMLDivElement> & IDropdownProps) => {
     const { ...rest } = props;
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState<ISelectedValue>();
@@ -15,6 +15,7 @@ const Dropdown = (props: IDropdownProps & React.HTMLProps<HTMLDivElement>) => {
     const handleOptionClick = (option: ISelectedValue) => {
         setSelectedOption(option);
         setIsOpen(false);
+        if (props.onChange) props.onChange(option.value);
     };
     const handleClickOutside = (event: MouseEvent) => {
         if (
@@ -49,11 +50,23 @@ const Dropdown = (props: IDropdownProps & React.HTMLProps<HTMLDivElement>) => {
         // setIsOpen(!isOpen);
     };
     useEffect(() => {
+        if (props.defaultValue) {
+            const selected = props.options.find(
+                (el) => el.value === props.defaultValue
+            );
+            console.log("SELECTED", selected);
+            setSelectedOption(selected);
+        }
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
+    useEffect(() => {
+        const selected = props.options.find((el) => el.value === props.value);
+        console.log("SELECTED", selected);
+        setSelectedOption(selected);
+    }, [props.value]);
 
     const Options = (props: {
         options: ISelectedValue[];

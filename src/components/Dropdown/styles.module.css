@@ -5,6 +5,8 @@
     /* top: 0; */
     max-height: 15rem;
     overflow-y: auto;
+    background: white;
+    z-index: 50;
 }
 .openUpwards .options {
     bottom: calc(100%); /* Adjust as needed */

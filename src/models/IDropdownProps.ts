@@ -7,7 +7,7 @@ export interface IDropdownProps {
     defaultValue?: string | number;
     options: { value: string | number; label: string }[];
     placeholder?: string;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (value: string | number) => void;
     onPressEnter?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onBlur?: () => void;
     validation?: {

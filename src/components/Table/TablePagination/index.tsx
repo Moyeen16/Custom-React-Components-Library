@@ -2,6 +2,7 @@
 import React from "react";
 import { AngleLeft } from "@styled-icons/fa-solid/AngleLeft";
 import { AngleRight } from "@styled-icons/fa-solid/AngleRight";
+import Dropdown from "../../Dropdown";
 
 interface ITablePaginationProps {
     totalNumberofPages: number;
@@ -20,6 +21,16 @@ const TablePagination = (props: ITablePaginationProps) => {
     const renderPageNumbers = () => {
         const pageNumbers = getPageNumbers();
         const maxPageLinks = 10; // Adjust this to your preference
+        const dropdownOptions =
+            props.totalNumberofPages > 25
+                ? Array.from(
+                      { length: props.totalNumberofPages },
+                      (_, index) => ({
+                          value: index + 1,
+                          label: (index + 1).toString(),
+                      })
+                  )
+                : [];
 
         if (pageNumbers.length <= maxPageLinks) {
             return pageNumbers.map((pageNumber) => (
@@ -62,17 +73,51 @@ const TablePagination = (props: ITablePaginationProps) => {
                     className={
                         pageLink === "..."
                             ? "my-auto ml-1"
-                            : pageLink === Number(currentPage)
+                            : pageLink === Number(currentPage) &&
+                              props.totalNumberofPages <= 25
                             ? "cursor-pointer mx-2 mb-1 text-md text-table-pagination-text-pgSelected font-semibold underline"
                             : "cursor-pointer mx-2 mb-1 text-md text-table-pagination-text-pg font-normal"
                     }
-                    onClick={() => {
-                        if (pageLink !== "...") {
-                            setCurrentPage(Number(pageLink));
-                        }
-                    }}
                 >
-                    {pageLink}
+                    {props.totalNumberofPages > 25 ? (
+                        pageLink === Number(currentPage) ? (
+                            <div
+                                style={{
+                                    width: "60px",
+                                }}
+                            >
+                                <Dropdown
+                                    options={dropdownOptions}
+                                    noMaxWidth
+                                    responsive
+                                    value={currentPage}
+                                    onChange={(value) => {
+                                        setCurrentPage(Number(value));
+                                    }}
+                                />
+                            </div>
+                        ) : (
+                            <span
+                                onClick={() => {
+                                    if (pageLink !== "...") {
+                                        setCurrentPage(Number(pageLink));
+                                    }
+                                }}
+                            >
+                                {pageLink}
+                            </span>
+                        )
+                    ) : (
+                        <span
+                            onClick={() => {
+                                if (pageLink !== "...") {
+                                    setCurrentPage(Number(pageLink));
+                                }
+                            }}
+                        >
+                            {pageLink}
+                        </span>
+                    )}
                 </span>
             ));
         }

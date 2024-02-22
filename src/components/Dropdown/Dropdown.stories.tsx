@@ -24,7 +24,12 @@ type Story = StoryObj<typeof Dropdown>;
 export const SimpleDropdown = (args: IDropdownProps) => {
     return (
         <div style={{ width: "900px" }}>
-            <Dropdown {...args} />
+            <Dropdown
+                {...args}
+                onChange={(value) => {
+                    alert(value);
+                }}
+            />
         </div>
     );
 };
@@ -38,7 +43,12 @@ SimpleDropdown.args = {
 export const DropdownWithParentWidth = (args: IDropdownProps) => {
     return (
         <div style={{ width: "700px" }}>
-            <Dropdown {...args} />
+            <Dropdown
+                {...args}
+                onChange={(value) => {
+                    alert(value);
+                }}
+            />
         </div>
     );
 };
@@ -59,7 +69,12 @@ export const DropdownWithLongOptionsList = (args: IDropdownProps) => {
                 marginTop: "530px",
             }}
         >
-            <Dropdown {...args} />
+            <Dropdown
+                {...args}
+                onChange={(value) => {
+                    alert(value);
+                }}
+            />
         </div>
     );
 };
