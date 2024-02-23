@@ -174,5 +174,37 @@ module.exports = {
                 processing: "#66A3FF",
             },
         },
+        table: {
+            primary: "#EC7200",
+            accent: "#32A29B",
+            "accent-hover": "#ADDAD7",
+            text: {
+                header: "#1A1628",
+                body: "#454250",
+                disabled1: "#cccccc",
+            },
+            pagination: {
+                bg: {
+                    hover: "#62D2D1",
+                    disbaled: "#FAFAFA",
+                },
+                border: {
+                    DEFAULT: "#B2B0B6",
+                    hover: "#62D2D1",
+                    disabled: "#E9E7E9",
+                    focused: "#77A1A8",
+                    pressed: "#345864",
+                },
+                text: {
+                    DEFAULT: "#454250",
+                    hover: "white",
+                    disabled: "#E9E7E9",
+                    focused: "#77A1A8",
+                    pressed: "#345864",
+                    pgSelected: "#1a1628",
+                    pg: "#454250",
+                },
+            },
+        },
     },
 };

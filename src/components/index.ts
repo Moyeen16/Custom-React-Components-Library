@@ -10,3 +10,5 @@ export { default as Drawer } from "./Drawer";
 export { default as Modal } from "./Modal";
 export { default as ProgressBar } from "./ProgressBar";
 export { default as Tag } from "./Tag";
+export { default as Table } from "./Table";
+export { default as Dropdown } from "./Dropdown";

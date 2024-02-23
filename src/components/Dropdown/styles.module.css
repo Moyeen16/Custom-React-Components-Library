@@ -1,0 +1,37 @@
+.options {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+    max-height: 15rem;
+    overflow-y: auto;
+    background: white;
+    z-index: 50;
+}
+.openUpwards .options {
+    bottom: calc(100%); /* Adjust as needed */
+    top: auto;
+}
+
+/* Width */
+::-webkit-scrollbar {
+    width: 8px; /* Change the width of the scrollbar */
+    border-radius: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Change the color of the track */
+    border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Change the color of the scrollbar handle */
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #32a29b; /* Change the color of the scrollbar handle on hover */
+}
