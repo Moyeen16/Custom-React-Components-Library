@@ -43,7 +43,7 @@ const Table = (props: ITableProps) => {
                     <tr>
                         {tableData.headers.map((header, idx) => (
                             <th
-                                className="font-semibold text-sm py-2 px-4 text-left border-b-2 border-table-accent text-table-text-header top-0 z-10 sticky"
+                                className="font-semibold text-sm py-2 px-4 text-left border-b-2 border-table-accent text-table-text-header top-0 z-10"
                                 key={idx}
                                 onClick={() =>
                                     header.sortable && handleSort(header.key)
