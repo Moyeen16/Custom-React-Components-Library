@@ -1,6 +1,6 @@
 {
     "name": "ms-custom-react-components-library",
-    "version": "1.0.25",
+    "version": "1.0.26",
     "description": "This is an easy to use custom library containing basic React components.",
     "scripts": {
         "build": "rimraf dist && rollup -c",
@@ -77,6 +77,7 @@
         "template"
     ],
     "dependencies": {
+        "@styled-icons/boxicons-solid": "^10.47.0",
         "@styled-icons/entypo": "^10.46.0"
     }
 }

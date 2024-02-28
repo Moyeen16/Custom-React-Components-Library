@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ITopNavbarProps } from "../../models/ITopNavbarProps";
 const TopNavbar: React.FC<ITopNavbarProps> = (props: ITopNavbarProps) => {
     return (
-        <div className="bg-navbar-bg text-navbar px-4 py-2">
+        <div className="bg-navbar-bg text-navbar px-4 py-2 flex items-center justify-between">
             <div className="flex items-center sm:w-5/12 lg:w-6/12 xl:w-7/12">
                 <img
                     className="zsLogo"
@@ -20,6 +20,7 @@ const TopNavbar: React.FC<ITopNavbarProps> = (props: ITopNavbarProps) => {
                     </Link>
                 </h1>
             </div>
+            {props.extra && <div>{props.extra}</div>}
         </div>
     );
 };
