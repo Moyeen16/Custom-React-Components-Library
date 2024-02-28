@@ -6,5 +6,6 @@ export interface IButtonProps
     transition?: boolean;
     disabled?: boolean;
     children?: React.ReactNode;
+    small?: boolean;
     onClick?: () => void;
 }

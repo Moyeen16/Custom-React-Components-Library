@@ -12,7 +12,7 @@ export interface IInputProps {
     prefix?: JSX.Element | string;
     suffix?: JSX.Element | string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    onPressEnter?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onPressEnter?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     onBlur?: () => void;
     validation?: {
         error: boolean;

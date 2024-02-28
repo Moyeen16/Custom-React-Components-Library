@@ -27,7 +27,7 @@ const Input: React.FC<IInputProps> = (props: IInputProps) => {
                     {props.label} :
                 </label>
             )}
-            <div className="relative">
+            <div className="relative flex-grow">
                 <div
                     className={`min-w-32 max-w-full flex flex-1 border-2 rounded-md relative
                 ${
@@ -67,6 +67,12 @@ const Input: React.FC<IInputProps> = (props: IInputProps) => {
                         onBlur={() => {
                             props.onBlur && props.onBlur();
                             setFocus(false);
+                        }}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                                // Call your onPressEnter function here
+                                props.onPressEnter && props.onPressEnter(e);
+                            }
                         }}
                         maxLength={props.maxLength}
                     />

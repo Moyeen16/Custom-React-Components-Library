@@ -7,6 +7,8 @@ const Button = (props: IButtonProps) => {
             className={`${
                 props.className
             } min-w-16 border-2 rounded-md px-4 py-1 font-medium text-clip whitespace-nowrap ${
+                props.small ? "text-sm" : ""
+            } ${
                 props.disabled
                     ? "bg-button-disabled-bg border-button-disabled-border text-button-disabled cursor-default"
                     : props.transition
