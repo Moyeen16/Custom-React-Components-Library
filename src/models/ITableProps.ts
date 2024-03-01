@@ -19,4 +19,6 @@ export interface ITableData {
 }
 export interface ITableProps {
     tableData: ITableData;
+    pagination?: boolean;
+    pageSize?: number;
 }

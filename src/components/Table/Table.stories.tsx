@@ -1443,8 +1443,8 @@ export const SimpleTableWithPagination = (args: ITableProps) => {
     };
     return (
         <div style={{ width: "1000px" }}>
-            <Table tableData={testData} />
+            <Table {...args} tableData={testData} pagination />
         </div>
     );
 };
-SimpleTableWithPagination.args = {};
+SimpleTableWithPagination.args = { pageSize: 4 };

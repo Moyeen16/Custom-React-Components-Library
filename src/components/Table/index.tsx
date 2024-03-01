@@ -10,7 +10,9 @@ const Table = (props: ITableProps) => {
     const [sortOrder, setSortOrder] = React.useState<"asc" | "desc">("asc");
     const [currentPage, setCurrentPage] = React.useState<number>(1);
     const [expandedRow, setExpandedRow] = React.useState<number>();
-    const itemsPerPage = 4;
+    const itemsPerPage = props.pagination
+        ? props.pageSize ?? 10
+        : tableData.data.length;
     const totalNumberOfPages = Math.ceil(tableData.data.length / itemsPerPage);
 
     // Sorting function
@@ -43,7 +45,7 @@ const Table = (props: ITableProps) => {
                     <tr>
                         {tableData.headers.map((header, idx) => (
                             <th
-                                className="font-semibold text-sm py-2 px-4 text-left border-b-2 border-table-accent text-table-text-header top-0 z-10"
+                                className="font-semibold text-sm py-2 px-4 text-left border-b-2 border-table-accent text-table-text-header top-0 sticky bg-white"
                                 key={idx}
                                 onClick={() =>
                                     header.sortable && handleSort(header.key)
@@ -55,11 +57,13 @@ const Table = (props: ITableProps) => {
                                               width: header.widthPercentage
                                                   ? `${header.widthPercentage}%`
                                                   : "auto",
+                                              zIndex: "999",
                                           }
                                         : {
                                               width: header.widthPercentage
                                                   ? `${header.widthPercentage}%`
                                                   : "auto",
+                                              zIndex: "999",
                                           }
                                 }
                             >
@@ -152,11 +156,13 @@ const Table = (props: ITableProps) => {
                 </tbody>
             </table>
 
-            <TablePagination
-                currentPage={currentPage}
-                totalNumberofPages={totalNumberOfPages}
-                setCurrentPage={setCurrentPage}
-            />
+            {props.pagination && (
+                <TablePagination
+                    currentPage={currentPage}
+                    totalNumberofPages={totalNumberOfPages}
+                    setCurrentPage={setCurrentPage}
+                />
+            )}
         </div>
     );
 };

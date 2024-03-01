@@ -16,6 +16,13 @@
     width: 100%;
 }
 
+.table-container tbody {
+    border-bottom: 1px solid #32a29b;
+}
+
+.nested-table tbody {
+    border-bottom: 1px solid #32a29b;
+}
 .nested-table tbody tr:nth-child(2n) td {
     background: #ffff; /* Even row color */
 }

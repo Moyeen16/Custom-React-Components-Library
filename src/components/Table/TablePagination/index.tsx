@@ -123,7 +123,7 @@ const TablePagination = (props: ITablePaginationProps) => {
         }
     };
     return (
-        <div className="w-full flex items-center justify-end pt-1 flex-wrap border-t border-table-accent">
+        <div className="w-full flex items-center justify-end pt-1 flex-wrap">
             {totalNumberofPages > 1 && (
                 <>
                     <span
